@@ -1,0 +1,21 @@
+let num = 5
+
+switch (num) {
+    case 1:
+        console.log('Code 1')
+    case 2: 
+        console.log('Code 2')
+        break
+    case 3: 
+        console.log('Code 3')
+        break
+    case 4:
+    case 7:
+    case 9:
+        console.log('Code 4-7-9')
+        break
+    case 5:
+        console.log('Code 5')
+    default:
+        console.log('Code Invalid')
+}
