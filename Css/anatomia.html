@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style>
+        .selector {
+            color: brown;
+            font-size: 30px;
+            text-align: center;
+            border: solid 5px navy;
+            font-family: Arial, Helvetica, sans-serif;
+            /* Funções */
+            width: calc(100% - 10px);
+            background-color: bisque;
+        }
+
+        /* Peseudo classe */
+        .selector:hover {
+            color: black;
+            background-color: aquamarine;
+        }
+
+        /* Pseudo elemento */
+        .selector::first-letter {
+            font-size: 54px;
+            font-style: oblique;
+        }
+
+        footer {
+            margin-top: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="selector">Conteúdo</div>
+
+    <footer>
+        Seletores, Atributos - Valores, Funções, Peseudo classe, Pseudo elemento
+    </footer>
+</body>
+
+</html>

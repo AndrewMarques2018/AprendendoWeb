@@ -1,0 +1,26 @@
+console.log("Imperativo vs Declarativo", "\n")
+
+const alunos = [
+    {nome: "Isbui Santos",      nota: 5.00},
+    {nome: "Jubileu da Silva",  nota: 8.20},
+    {nome: "Yasrisson Costa",   nota: 9.80},
+    {nome: "Francis Gleidson",  nota: 5.00},
+    {nome: "Chay Chong",        nota: 2.30},
+]
+
+// Imperativo
+let total1 = 0
+for (let i = 0; i < alunos.length; i++){
+    total1 += alunos[i].nota
+}
+let media1 = parseFloat(total1 / alunos.length).toFixed(2)
+console.log("Imperativo", "\n", "- Média da 6° serie: " + media1)
+
+// Declarativo
+const getNota = aluno => aluno.nota
+const somaNotas = (total, notas) => total + notas 
+const total2 = alunos.map(getNota).reduce(somaNotas)
+const media2 = parseFloat(total2 / alunos.length).toFixed(2)
+console.log("Declarativo", "\n", "- Média da 6° serie: " + media2)
+
+// Deus é fiel 👩‍💻
