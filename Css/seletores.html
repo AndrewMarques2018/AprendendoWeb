@@ -6,7 +6,71 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        * {
+            /* Todos os elementos*/
+            font-style: normal;
+        }
+
+        .tag {
+            /* Classes */
+            font-style: unset;
+        }
+
+        #aprovados {
+            /* Id*/
+            font-size: large;
+        }
+
+        #aninhado > div {
+            /* Filho direto Div*/
+            color: blue;
+        }
+
+        #aninhado section {
+            /* Descendente direto Section*/
+            color: blueviolet;
+        }
+
+        p + ul {
+            /* ul adjecente de p, mesmo pai*/
+            color: rgb(103, 103, 0);
+        }
+
+        p ~ ol {
+            /* ol que tem o mesmo pai de p*/
+            color: rgb(33, 139, 19);
+        }
+
+        [feira] {
+            /* ocontem o parametro feira*/
+            color: rgb(0, 187, 255);
+        }
+
+        [feira='escritorio'] {
+            /* o parametro feira = escritorio*/
+            color: rgb(76, 0, 255);
+        }
+
+        [feira*='cas'] {
+            /* o parametro feira contem 'cas'*/
+            color: rgb(208, 255, 0);
+        }
+
+        span:nth-child(2) {
+            /* Um span que seja o 2° filho */
+            color: rgb(0, 255, 0);
+        }
+
+        /* Muito usado em tabelas */
+        section > :nth-child(odd) {
+            /* Um span que seja o filho em uma posição impar*/
+            background-color: antiquewhite;
+        }
+
+        section > :nth-child(even) {
+            /* Um span que seja o filho em uma posição par*/
+            background-color: beige;
+        }
     </style>
 </head>
 
@@ -18,7 +82,7 @@
                 <li>Arroz</li>
                 <li>Feijão</li>
             </ul>
-            <ul class='tag' feira='escritorio empresa'>
+            <ul class='tag' feira='escritorio'>
                 <li>Café</li>
                 <li>Água</li>
             </ul>
@@ -39,6 +103,9 @@
         </div>
     </div>
     <script src="js/tag.js"></script>
+    <footer class="tag">
+        Seletores
+    </footer>
 </body>
 
 </html>
